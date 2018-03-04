@@ -245,6 +245,8 @@ footer {
   body {
     padding:15px;
   }
+  h1, .view, .TitleDescription, footer{
+    text-align:center;}
 
   header ul {
     width:99%;
