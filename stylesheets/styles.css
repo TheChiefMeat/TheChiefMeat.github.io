@@ -194,6 +194,14 @@ footer {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
+ img{
+  max-width:90%;
+  height:auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
@@ -245,7 +253,7 @@ footer {
   body {
     padding:15px;
   }
-  h1, .view, .TitleDescription, footer{
+  h1, .view, .TitleDescription, footer, h3{
     text-align:center;}
 
   header ul {
