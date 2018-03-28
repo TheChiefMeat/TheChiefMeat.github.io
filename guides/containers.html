@@ -438,6 +438,15 @@ js.onkeyup = function(event) {
 	<br>
 	<div class="separator"><img src="https://i.imgur.com/qzrLxiv.gif"></div>
 	<br>
+	<h1>Subdomains & Logging In</h1>
+	<p>Certain sites, like Google, use a different subdomain when authenticating users and allowing them to log in. Because
+	this subdomain isn't part of the container of the parent domain, the container doesn't realise that it's the same person
+	attempting to log in and in effect, anyone using containers without adding the subdomain to the appropriate container will be found in a loop.</p>
+	<p>To fix this we simply need to add the login subdomain to the same container we created for the parent domain, below
+	is a gif showing you this process, in my example, for Google.</p>
+	<br>
+	<div class="separator"><img src="https://i.imgur.com/SvI4evQ.gif"</div>
+	<br>
 	<p>And with that you've successfully set up containers for your most visited sites, as well as temporary containers for those sites you don't want sniffing around in cookies that don't belong to them.</p>
 	</section>  
 	 
