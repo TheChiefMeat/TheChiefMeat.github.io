@@ -460,7 +460,7 @@ virtualenv searx-ve
 	<p>Now that the installation is complete, go ahead and restart the <a href="https://putty.org/">Putty client.</a></p>	
 	<p>We now need to move back into the searx folder and generate a secret key, thankfully this is easy to do with the following commands:</p>
 	
-<pre><code>cd /usr/local
+<pre><code>cd /usr/local/searx
 sed -i -e "s/ultrasecretkey/`openssl rand -hex 16`/g" searx/settings.yml
 </code></pre>
 	
