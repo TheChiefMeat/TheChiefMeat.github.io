@@ -458,9 +458,10 @@ virtualenv searx-ve
 </code></pre>
 
 	<p>Now that the installation is complete, go ahead and restart the <a href="https://putty.org/">Putty client.</a></p>	
-	<p>We now need to generate a secret key, thankfully this is easy to do with the following command:</p>
+	<p>We now need to move back into the searx folder and generate a secret key, thankfully this is easy to do with the following commands:</p>
 	
-<pre><code>sed -i -e "s/ultrasecretkey/`openssl rand -hex 16`/g" searx/settings.yml
+<pre><code>cd /usr/local
+sed -i -e "s/ultrasecretkey/`openssl rand -hex 16`/g" searx/settings.yml
 </code></pre>
 	
 	<p>Now we can go ahead and set the port; This is entirely optional, but if you want to have your SearX instance running without the port shown, we need to change the port number to 80. Let's go ahead and edit the port number with the command below:</p>
