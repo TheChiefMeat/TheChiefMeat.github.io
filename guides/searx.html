@@ -424,9 +424,10 @@ js.onkeyup = function(event) {
 	you understand how to flash the operating system, log into your device via SSH and operate the terminal, as well as having already reset the default devices password with the passwd command.</p>
 	<p>First we have to flash our operating system image onto an SD card; for this I'm using etcher.</p>
 	<p>Heading over to the <a href="https://asciimoo.github.io/searx/dev/install/installation.html">SearX metasearch engine</a>  page we can see and follow the instructions. First off we should make sure that our
-	system is up to date, so go ahead and run the following command:</p>
+	system is up to date, so go ahead and run the following commands:</p>
 
 <pre><code>sudo apt-get update
+sudo apt-get upgrade
 </code></pre>
 
 	<p>If there are any updates, go ahead and proceed to update your OS, and restart the <a href="https://putty.org/">Putty client.</a></p>
@@ -464,7 +465,8 @@ virtualenv searx-ve
 sed -i -e "s/ultrasecretkey/`openssl rand -hex 16`/g" searx/settings.yml
 </code></pre>
 	
-	<p>Now we can go ahead and set the port; This is entirely optional, but if you want to have your SearX instance running without the port shown, we need to change the port number to 80. Let's go ahead and edit the port number with the command below:</p>
+	<p>Now we can go ahead and set the port; This is entirely optional, but if you want to have your SearX instance running without the port shown, we need to change the port number to 80.
+	We also need to change the "bind_address" value to our local port to ensure connection. Let's go ahead and edit the ip address and port number with the command below:</p>
 	
 <pre><code>sudo nano /usr/local/searx/searx/settings.yml
 </code></pre>
