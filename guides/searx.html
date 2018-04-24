@@ -462,7 +462,7 @@ virtualenv searx-ve
 	<p>We now need to move back into the searx folder and generate a secret key, thankfully this is easy to do with the following commands:</p>
 	
 <pre><code>cd /usr/local/searx
-sed -i -e "s/ultrasecretkey/`openssl rand -hex 16`/g" searx/settings.yml
+sudo sed -i -e "s/ultrasecretkey/`openssl rand -hex 16`/g" searx/settings.yml
 </code></pre>
 	
 	<p>Now we can go ahead and set the port; This is entirely optional, but if you want to have your SearX instance running without the port shown, we need to change the port number to 80.
